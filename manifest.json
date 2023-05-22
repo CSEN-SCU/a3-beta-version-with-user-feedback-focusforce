@@ -1,20 +1,23 @@
+
 {
   "manifest_version": 3,
   "name": "Hello Extensions",
   "description": "COEN 296A A3",
-  "version": "1.0",
+  "version": "2.0",
   "action": {
-    "default_popup": "helloworld.html",
+    "default_popup": "popup.html",
     "default_icon": "helloworld.png"
   },
   "content_scripts": [
     {
-      "js": ["helloworld.js"],
-      "matches": ["https://www.youtube.com/*"]
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "css": ["timerStyles.css"]
     }
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background-1.js"
   },
-  "permissions": ["storage", "activeTab", "scripting"]
+  "permissions": ["storage", "tabs", "activeTab", "scripting", "webNavigation", "storage",
+  "webRequest"]
 }
