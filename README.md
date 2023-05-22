@@ -1,20 +1,34 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11115984&assignment_repo_type=AssignmentRepo)
 
-# Extension Name: LeetCodePal Version 2.0 Beta - Updated on May 22 (In 'develop' branch)
-Current Function:
-    - Unmodifiable White list (leetcode, neetcode, openaiGPT, google)
-    - Flexible Grey list: (with timer) if opened a website neither on white list nor in the blocked list, a timer will pop up.
-    - Strict block list: websites added in block lists will be totally blocked if accessing its URL
-        - If you want to modify the blocked lists, you will have to answer a coding question or complex algorithms question to get the modify button.
+# LeetCodePal Version 2.0 Beta
 
-Need to improve - 样式方面
+Current Function:
+
+1. **Unmodifiable White list** (leetcode, neetcode, openaiGPT, google)
+    
+2. **Flexible Grey list:** (with timer) if opened a website neither on white list nor in the blocked list, a timer will pop up.
+    
+3. **Strict block list**: websites added in block lists will be totally blocked if accessing its URL
+    
+If you want to modify the blocked lists, you will have to answer a coding question or complex algorithms question to get the modify button.
+
+
+
+**Need to improve - 样式方面**
+
     - 选择合适的coding question
+    
     - popup页面美化
+    
     - 让白名单上的网站显示出来并无法更改
 
-Need to improve - 功能方面
+
+**Need to improve - 功能方面**
+
     - grey list从正计时改成倒计时
+    
     - leetcode页面上加入计时器
+    
     - 艾宾浩斯记忆曲线获取一天前的题，一天前的题 && 两天前的题， 三天前的题。
 
 
