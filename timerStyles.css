@@ -1,0 +1,9 @@
+#timerElement {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 9999;  /* To ensure the timer is above all other elements */
+}
