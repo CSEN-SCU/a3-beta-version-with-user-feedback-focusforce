@@ -1,7 +1,8 @@
 Please Refre to README.md on the Final-Submission Branch.
+
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11115984&assignment_repo_type=AssignmentRepo)
 
-# LeetsFocus Version 2.5 Beta
+# LeetFlow Version 2.5 Beta
 
 **Current Function:**
 
@@ -19,36 +20,39 @@ Please Refre to README.md on the Final-Submission Branch.
 
 **Bugs that Need to be Fixed**
 
-1. 主页面相关（popup.js/ background.js）
+**Blocking Function**
+
+	- Redesign the blocking styling. Current is too simple
+
+**Youtube Filtering**
+
+	- Redesign the blocking styling. Current is too simple
+	- Add an alert before it closes the tab when user types in some non-leetcode related words.
+	- Add more keyword texts - algorithms, interview questions, etc
+
+
+**Leetcode Timing**
+
+	- Change the wording of the finish button, into something like “Finish today’s task”.
+
+
+**Leetcode Reminder on ID Page**
+
+	- Change the styling of the word. Make it easier to get notified.
+
+**Timer on GreyList**
+
+	- Change the styling of the Timer, to make it able to hide when user’s mouse is on it, in case user wants to click on his/her icon which is under the timer
     
-    1.1 把chatGPT网站增加到白名单中
+	- Add a global alert when it reaches 5 mins.
 
-    1.2 Popup菜单里清除掉现有的allow list function，start
-  
-  
-2. 灰名单相关(timerContentScript.js)
+**Popup Format**
 
-    2.1 timer现在固定在页面右上角无法移动位置。需要更改至鼠标滑动到timer范围内timer自动消失的效果，否则会挡住一部分网页功能
-   
-    2.2 timer每次刷新之后现在会重新计时，需要调整至刷新之后还可以计时
-
-
-
-**Need to improve - UI (Han, Chunadi)**
-
-    - 选择合适的complex question
+	- Redesign it into 4 columns bars. To the very left, there is a logo where the clear button’s at. 1st is block list settings, 2nd is grey list’s timing mode settings, 3rd is  white list’s settings - saying that you cannot change the whitelisted sites.
     
-    - popup页面美化 - 分栏：block list，white list，grey list
-    
-    - 让白名单上的网站显示出来并无法更改
-
-
-**Need to improve - function**
-
-    - Popup菜单增加选择正计时/倒计时选项（timer增加倒计时模式）
-    
-    - timer到5分钟左右会发送提醒
+	- Good to have: Let users enter leetcode id/ Track recent ACs / Randomly choosing a problem
         
+============================================================
 
 
 
