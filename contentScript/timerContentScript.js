@@ -1,6 +1,7 @@
+
 (function () {
     // If the current URL is a LeetCode URL, return early to prevent double timer
-    if (window.location.hostname.includes("leetcode.com")) {
+    if (window.location.hostname.includes("leetcode.com"||"openai.com"||"youtube.com")) {
       return;
     }
   

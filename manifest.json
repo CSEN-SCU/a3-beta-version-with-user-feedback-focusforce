@@ -25,6 +25,6 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["storage", "tabs", "activeTab", "scripting", "webNavigation", "storage", "windows",
+  "permissions": ["storage", "tabs", "activeTab", "scripting", "webNavigation", "storage", "windows", "notifications",
   "webRequest"]
 }

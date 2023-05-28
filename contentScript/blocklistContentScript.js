@@ -10,6 +10,7 @@ function blockSite() {
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.command === "blockSite") {
         blockSite();
+        console.log("site blocked");
     }
 });
 
