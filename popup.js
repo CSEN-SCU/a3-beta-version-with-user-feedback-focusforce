@@ -57,7 +57,17 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
     }
 });
 
-// Rest of the code...
+
+// Add event listener for "Clean Up Browsing" button
+document.getElementById('cleanButton').addEventListener('click', function() {
+    chrome.runtime.sendMessage({command: "cleanLocalStorageAndTabs"}, function(response) {
+        if (chrome.runtime.lastError) {
+            console.error(chrome.runtime.lastError);
+        }
+    });
+});
+
+
 
 
 // Function to refresh the block list
@@ -90,55 +100,9 @@ document.getElementById('submitAnswerButton').addEventListener('click', function
     }
 });
 
-document.getElementById('startButton').addEventListener('click', function() {
-    isTimerRunning = true;
-    startTime = Date.now();
 
-    // Every second, check if the active tab is in the whitelist
-    timerInterval = setInterval(function() {
-        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            let activeTab = tabs[0];
-            let isOnWhiteList = whiteList.some(function(whiteListedUrl) {
-                return activeTab.url.includes(whiteListedUrl);
-            });
-            if (!isOnWhiteList) {
-                // If the tab is not in the whitelist, update the total time
-                totalTime += Date.now() - startTime;
-                startTime = Date.now();
-            }
-        });
-    }, 1000);
-});
 
-document.getElementById('endButton').addEventListener('click', function() {
-    if (isTimerRunning) {
-        isTimerRunning = false;
-        clearInterval(timerInterval);
-
-        // Calculate the total time spent during the last task
-        totalTime += Date.now() - startTime;
-
-        // Show the total time spent
-        let totalSeconds = Math.round(totalTime / 1000); 
-        let hours = Math.floor(totalSeconds / 3600);
-        let minutes = Math.floor((totalSeconds % 3600) / 60);
-        let seconds = totalSeconds % 60;
-
-        // Show the total time spent
-        let timeSpentText = 'Time spent: ';
-        if (hours > 0) {
-            timeSpentText += hours + ' hours ';
-        }
-        if (minutes > 0 || hours > 0) {
-            timeSpentText += minutes + ' minutes ';
-        }
-        timeSpentText += seconds + ' seconds';
-        document.getElementById('timeSpent').textContent = timeSpentText;
-
-        // Reset the total time
-        totalTime = 0;
-    }
-});
+  
 
 document.getElementById('blockForm').addEventListener('submit', function(e) {
     e.preventDefault();
