@@ -2,17 +2,19 @@
 
 # LeetsFocus Version 1.0 Beta
 
-Current Function:
+**Current Function:**
 
 1. **White list** (leetcode, youtube)
 
-1.1 Leetcode Timer & Reminder
-1.2 Youtube Search Filter & Blocker
+    1.1 Leetcode Timer & Reminder
+
+    1.2 Youtube Search Filter & Blocker
     
 2. **Flexible Grey list:** (with timer) if opened a website neither on white list nor in the blocked list, a timer will pop up.
     
 3. **Strict block list**: websites added in block lists will be totally blocked if accessing its URL. If you want to modify the blocked lists, you will have to answer a question to get the modify button.
 
+============================================================
 
 **Bugs that Need to be Fixed**
 
