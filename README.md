@@ -4,29 +4,29 @@
 
 Current Function:
 
-1. **Unmodifiable White list** (leetcode, neetcode)
+1. **White list** (leetcode, youtube)
+
+1.1 Leetcode Timer & Reminder
+1.2 Youtube Search Filter & Blocker
     
 2. **Flexible Grey list:** (with timer) if opened a website neither on white list nor in the blocked list, a timer will pop up.
     
-3. **Strict block list**: websites added in block lists will be totally blocked if accessing its URL
-    
-If you want to modify the blocked lists, you will have to answer a coding question or complex algorithms question to get the modify button.
+3. **Strict block list**: websites added in block lists will be totally blocked if accessing its URL. If you want to modify the blocked lists, you will have to answer a question to get the modify button.
 
 
 **Bugs that Need to be Fixed**
 
-1. 白名单相关
-
-    1.1 neetcode和leetcode界面仍有timer计时，需要消除掉
+1. 白名单相关(popup.js) 
     
-    1.2 把chatGPT增加到白名单中
+    1.1 把chatGPT网站增加到白名单中
 
-    1.3 清除掉现有的allow list function
+    1.2 Popup页面清除掉现有的allow list function
   
   
-2. 灰名单的timer位置，现在固定在页面右上角无法移动位置。更改至鼠标滑动到timer范围内timer自动消失，否则会挡住一部分网页功能
+2. 灰名单相关(timerContentScript.js)
 
-4. block list
+    2.1 timer位置，现在固定在页面右上角无法移动位置。更改至鼠标滑动到timer范围内timer自动消失，否则会挡住一部分网页功能
+    2.2 timer每次刷新之后现在会重新计时，需要调整至刷新之后还可以计时
 
 
 
@@ -41,12 +41,10 @@ If you want to modify the blocked lists, you will have to answer a coding questi
 
 **Need to improve - function**
 
-    - grey list；正计时，倒计时两种模式选择；timer增加提示性话语；
+    - grey list - 正计时，倒计时两种模式选择；
     
-    - leetcode页面上加入计时器：思考思路的计时器（倒计时10分钟）结束后可以选择开始做题或直接问chatGPT（生成一段prompt供复制黏贴）
-    
-    - 艾宾浩斯记忆曲线获取一天前的题，一天前的题 && 两天前的题， 三天前的题（已research，难以实现）
-    
+    - timer增加提示性话语；
+        
 
 
 
