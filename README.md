@@ -18,16 +18,17 @@
 
 **Bugs that Need to be Fixed**
 
-1. 白名单相关(popup.js) 
+1. 主页面相关（popup.js/ background.js）
     
     1.1 把chatGPT网站增加到白名单中
 
-    1.2 Popup页面清除掉现有的allow list function
+    1.2 Popup菜单里清除掉现有的allow list function，start
   
   
 2. 灰名单相关(timerContentScript.js)
 
-    2.1 timer位置，现在固定在页面右上角无法移动位置。更改至鼠标滑动到timer范围内timer自动消失，否则会挡住一部分网页功能
+    2.1 timer现在固定在页面右上角无法移动位置。需要更改至鼠标滑动到timer范围内timer自动消失的效果，否则会挡住一部分网页功能
+   
     2.2 timer每次刷新之后现在会重新计时，需要调整至刷新之后还可以计时
 
 
@@ -43,9 +44,9 @@
 
 **Need to improve - function**
 
-    - grey list - 正计时，倒计时两种模式选择；
+    - Popup菜单增加选择正计时/倒计时选项（timer增加倒计时模式）
     
-    - timer增加提示性话语；
+    - timer到5分钟左右会发送提醒
         
 
 
