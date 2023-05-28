@@ -19,37 +19,7 @@
 
 **Bugs that Need to be Fixed**
 
-**Blocking Function**
-
-	- Redesign the blocking styling. Current is too simple
-
-**Youtube Filtering**
-
-	- Redesign the blocking styling. Current is too simple
-	- Add an alert before it closes the tab when user types in some non-leetcode related words.
-	- Add more keyword texts - algorithms, interview questions, etc
-
-
-**Leetcode Timing**
-
-	- Change the wording of the finish button, into something like “Finish today’s task”.
-
-
-**Leetcode Reminder on ID Page**
-
-	- Change the styling of the word. Make it easier to get notified.
-
-**Timer on GreyList**
-
-	- Change the styling of the Timer, to make it able to hide when user’s mouse is on it, in case user wants to click on his/her icon which is under the timer
-    
-	- Add a global alert when it reaches 5 mins.
-
-**Popup Format**
-
-	- Redesign it into 4 columns bars. To the very left, there is a logo where the clear button’s at. 1st is block list settings, 2nd is grey list’s timing mode settings, 3rd is  white list’s settings - saying that you cannot change the whitelisted sites.
-    
-	- Good to have: Let users enter leetcode id/ Track recent ACs / Randomly choosing a problem
+	- Please Refer to The 'Issues' Section of the Repository
         
 ============================================================
 
