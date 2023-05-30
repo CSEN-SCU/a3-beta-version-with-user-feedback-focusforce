@@ -20,7 +20,8 @@
     },
     {
       "matches": ["https://leetcode.com/*"],
-      "js": ["contentScript/leetcodeContentScript.js", "contentScript/reviewReminderScript.js"]    }
+      "js": ["contentScript/leetcodeContentScript.js", "contentScript/reviewReminderScript.js"]    
+    }
   ],
   "background": {
     "service_worker": "background.js"
