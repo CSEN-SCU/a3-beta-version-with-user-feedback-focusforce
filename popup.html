@@ -1,37 +1,101 @@
-
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <body>
     <h1>LeetFlow</h1>
-    <form id="blockForm">
-        <label for="blockInput">Add a website to the block list:</label><br>
-        <input type="text" id="blockInput" name="blockInput"><br>
-        <input value="Block" id="blockButton" type="submit">
-    </form>
-    <!-- <div>
-        <button id="startButton">Start Your Task</button>
-        <button id="endButton">Finish The Task</button>
-        <p id="timeSpent">Time Spent: 0</p>
-    </div> -->
-    <div>
+    <div class="tab">
+        <button class="tablinks" id="defaultOpen" data-tab-id="Start">Start</button>
+        <button class="tablinks" data-tab-id="Whitelist">Whitelist</button>
+        <button class="tablinks" data-tab-id="Greylist">Greylist</button>
+        <button class="tablinks" data-tab-id="Blocklist">Blocklist</button>
+        
+        
+    </div>
+
+    <div id="Start" class="tabcontent">
         <button id="cleanButton">Clean Up Browsing</button>
     </div>
 
-    <h2>Blocked List:</h2>
-    <div id="blockListContainer"></div>
-    <!-- Section for modifying blocked lists -->
-    <h2>Modify Blocked List</h2>
-    <button id="modifyButton">Modify</button>
-    
-    <!-- Hidden section for verification and modification -->
-    <div id="modifySection" style="display: none;">
-        <h3>Verification Required</h3>
-        <p>Answer the following question to proceed:</p>
-        <p>Question: What is the result of 5 + 8?</p>
-        <input type="text" id="answerInput" name="answerInput">
-        <button id="submitAnswerButton">Submit Answer</button>
+    <div id="Whitelist" class="tabcontent">
+        <p>The white list is unmodifiable. Please focus on the following flow: 1) Leetcode.com for daily practice; 2) Youtube for searching solving methods; 3) ChatGPT for small issues that cannot find answer elsewhere.</p>
+    </div>
+
+    <div id="Greylist" class="tabcontent">
+        <p>If you click on non-blocked and non-whitelisted websites, the reminder will tell you how much time you've used in these websites. Please use it for random and small tasks that need to be solved immediately.</p>
+    </div>
+
+    <div id="Blocklist" class="tabcontent">
+        <form id="blockForm">
+            <label for="blockInput">Add a website to the block list:</label><br>
+            <input type="text" id="blockInput" name="blockInput"><br>
+            <input value="Block" id="blockButton" type="submit">
+        </form>
+        <h2>Blocked List:</h2>
+        <div id="blockListContainer"></div>
+        <h2>Modify Blocked List</h2>
+        <button id="modifyButton">Modify</button>
+        <div id="modifySection" style="display: none;">
+            <h3>Verification Required</h3>
+            <p>Answer the following question to proceed:</p>
+            <p>Please type the string in reverse order:</p>
+            <p>dsfg!jhit*jew9ri7opt#i</p>
+            <input type="text" id="answerInput" name="answerInput">
+            <button id="submitAnswerButton">Submit Answer</button>
+        </div>
     </div>
     <script src="popup.js"></script>
+    <script src="tab.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+ <link rel="stylesheet" type="text/css" href="popup.css">
+<body>
+
+    <h1>LeetFlow</h1>
+    <div class="wrapper">
+        <div class="container">
+            <nav>
+                <a href="#Start" class="link link1">Start</a>
+                <a href="#Whitelist" class="link link2">Whitelist</a>
+                <a href="#Greylist" class="link link3">Greylist</a>
+                <a href="#Blocklist" class="link link4">Blocklist</a>
+            </nav>
+            <div class="content">
+                <div class="item item1" id="Start">
+                    <button id="cleanButton">Start Flowing !</button>
+                </div>
+                <div class="item item2" id="Whitelist">
+                    <p>The white list is unmodifiable. Please focus on the following flow: 1) Leetcode.com for daily practice; 2) Youtube for searching solving methods; 3) ChatGPT for small issues that cannot find answer elsewhere.</p>
+                </div>
+                <div class="item item3" id="Greylist">
+                    <p>If you click on non-blocked and non-whitelisted websites, the reminder will tell you how much time you've used in these websites. Please use it for random and small tasks that need to be solved immediately.</p>
+                </div>
+                <div class="item item4" id="Blocklist">
+                    <form id="blockForm">
+                        <label for="blockInput">Add a website to the block list:</label><br>
+                        <input type="text" id="blockInput" name="blockInput"><br>
+                        <input value="Block" id="blockButton" type="submit">
+                    </form>
+                    <h2>Blocked List:</h2>
+                    <div id="blockListContainer"></div>
+                    <!-- Section for modifying blocked lists -->
+                    <h2>Modify Blocked List</h2>
+                    <button id="modifyButton">Modify</button>
+                    <!-- Hidden section for verification and modification -->
+                    <div id="modifySection" style="display: none;">
+                        <h3>Verification Required</h3>
+                        <p>Answer the following question to proceed:</p>
+                        <p>Please type the string in reverse order:</p>
+                        <p>dsfg!jhit*jew9ri7opt#i</p>
+                        <input type="text" id="answerInput" name="answerInput">
+                        <button id="submitAnswerButton">Submit Answer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+    <script src="tab.js"></script>
 </body>
 </html>
-

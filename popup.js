@@ -89,7 +89,7 @@ document.getElementById('submitAnswerButton').addEventListener('click', function
     const answerInput = document.getElementById('answerInput');
     const answer = answerInput.value;
 
-    if (answer == "13") { // Check if the answer is correct
+    if (answer == "i#tp7ir9wejtihsj!gfsd") { // Check if the answer is correct
         isEditEnabled = true; // Enable edit mode
         answerInput.value = ''; // Clear the input field
         document.getElementById('modifySection').style.display = 'none'; // Hide the modification section
@@ -99,8 +99,6 @@ document.getElementById('submitAnswerButton').addEventListener('click', function
         answerInput.value = ''; // Clear the input field
     }
 });
-
-
 
   
 

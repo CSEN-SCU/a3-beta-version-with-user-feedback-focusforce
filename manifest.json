@@ -3,10 +3,10 @@
   "manifest_version": 3,
   "name": "LeetFlow",
   "description": "COEN 296A A3",
-  "version": "2.5",
+  "version": "2.6",
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "helloworld.png"
+    "default_icon": "WechatIMG691.png"
   },
   "content_scripts": [
     {
