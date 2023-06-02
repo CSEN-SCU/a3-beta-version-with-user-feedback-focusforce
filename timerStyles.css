@@ -10,6 +10,7 @@
     background-color: #F8D49A;
     border-radius: 10px;
     border: 2px solid rgba(255, 165, 0, 0.7);
+    z-index: 9999;
 }
 
 
