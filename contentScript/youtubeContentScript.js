@@ -9,7 +9,7 @@ function checkPage() {
         document.querySelector('#guide-wrapper').remove();
         var message = document.createElement("p");
         message.textContent = "Hey, it's not the time to watch fun videos! A Leetcode a day, keeps rejection letter away.";
-        message.style = "font-size: 100px; color: orange; text-align: center;";
+        message.style = "font-size: 50px; color: orange; text-align: center;";
         var primaryElement = document.getElementById("primary");
         primaryElement.appendChild(message);
         

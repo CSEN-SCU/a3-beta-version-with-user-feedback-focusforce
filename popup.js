@@ -19,6 +19,7 @@ function displayBlockList(blockedList) {
         if (isEditEnabled) { // if edit mode is enabled then show delete button
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Delete';
+            deleteButton.classList.add('deleteButton'); // 添加类名 deleteButton
             deleteButton.addEventListener('click', function() {
                 deleteBlockedUrl(blockedUrl);
             });
