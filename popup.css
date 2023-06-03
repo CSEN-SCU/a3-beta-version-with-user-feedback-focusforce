@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
   }
   body {
-    background: rgb(238, 174, 194);
+    background: #F8BC9A;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +46,7 @@
     background-color: rgba(208, 203, 203, 0.801);
   }
   nav a {
-    padding: 10px;
+    padding: 8px;
     text-decoration: none;
     color: rgb(160, 154, 154);
     font-size: 0.5rem;
