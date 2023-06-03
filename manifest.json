@@ -27,5 +27,11 @@
     "service_worker": "background.js"
   },
   "permissions": ["storage", "tabs", "activeTab", "scripting", "webNavigation", "storage", "windows", "notifications",
-  "webRequest"]
+  "webRequest"],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*.jpeg"],
+      "matches": ["<all_urls>"]    }
+  ]
 }
