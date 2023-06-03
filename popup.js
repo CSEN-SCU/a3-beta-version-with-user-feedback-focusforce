@@ -19,6 +19,7 @@ function displayBlockList(blockedList) {
         if (isEditEnabled) { // if edit mode is enabled then show delete button
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Delete';
+            deleteButton.classList.add('deleteButton'); // 添加类名 deleteButton
             deleteButton.addEventListener('click', function() {
                 deleteBlockedUrl(blockedUrl);
             });
@@ -89,7 +90,7 @@ document.getElementById('submitAnswerButton').addEventListener('click', function
     const answerInput = document.getElementById('answerInput');
     const answer = answerInput.value;
 
-    if (answer == "13") { // Check if the answer is correct
+    if (answer == "i#tp7ir9wejtihsj!gfsd") { // Check if the answer is correct
         isEditEnabled = true; // Enable edit mode
         answerInput.value = ''; // Clear the input field
         document.getElementById('modifySection').style.display = 'none'; // Hide the modification section
@@ -99,8 +100,6 @@ document.getElementById('submitAnswerButton').addEventListener('click', function
         answerInput.value = ''; // Clear the input field
     }
 });
-
-
 
   
 
