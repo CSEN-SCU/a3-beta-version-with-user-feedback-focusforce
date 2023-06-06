@@ -5,14 +5,14 @@
   "description": "COEN 296A A3",
   "version": "2.6",
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "popup/popup.html",
     "default_icon": "images/WechatIMG691.png"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["contentScript/timerContentScript.js","contentScript/blocklistContentScript.js"],
-      "css": ["timerStyles.css"]
+      "css": ["styles/timerStyles.css"]
     },
     {
       "matches": ["https://www.youtube.com/*"],
@@ -31,7 +31,7 @@
 
   "web_accessible_resources": [
     {
-      "resources": ["images/*.jpeg","nunito-v25-latin-regular.woff2", "PressStart2P-Regular.ttf"],
+      "resources": ["images/*.jpeg","styles/nunito-v25-latin-regular.woff2", "styles/PressStart2P-Regular.ttf"],
       "matches": ["<all_urls>"]    }
   ]
 }

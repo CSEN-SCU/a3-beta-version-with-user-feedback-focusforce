@@ -2,7 +2,7 @@ let isTimerRunning = false;
 let startTime;
 let totalTime = 0;
 
-let whiteList = ["leetcode.com", "neetcode.io/practice"];
+let whiteList = ["leetcode.com", "neetcode.io/practice", "chat.openai.com", "youtube.com"];
 let timerInterval;
 
 let isEditEnabled = false; // Flag to enable/disable edit mode
@@ -19,7 +19,7 @@ function displayBlockList(blockedList) {
         if (isEditEnabled) { // if edit mode is enabled then show delete button
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Delete';
-            deleteButton.classList.add('deleteButton'); // 添加类名 deleteButton
+            deleteButton.classList.add('deleteButton');
             deleteButton.addEventListener('click', function() {
                 deleteBlockedUrl(blockedUrl);
             });

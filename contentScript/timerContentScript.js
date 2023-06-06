@@ -1,6 +1,6 @@
 (function () {
-    // If the current URL is a LeetCode URL, return early to prevent double timer
-    if (window.location.hostname.includes("leetcode.com"||"openai.com"||"youtube.com")) {
+    // If the current URL is in Whitelist URL, return early to prevent double timer
+    if (window.location.hostname.includes("leetcode.com"||"chat.openai.com"||"www.youtube.com")) {
       return;
     }
   
@@ -9,7 +9,6 @@
     let tabId;
     let startTime;
     
-   
   
     // Function to format time
     function formatTime(timeElapsed) {
@@ -56,7 +55,7 @@
               timerElement.id = "timerElement";
               parentElement.appendChild(timerElement);
 
-              // 添加鼠标悬停和移出事件监听器
+              // Make the mouse float-control the presence of timer
               parentElement.addEventListener("mouseover", function() {
                 parentElement.style.display = "none";
               });
@@ -67,7 +66,7 @@
           
             }
             
-  
+            // Function to alert and record every 5 minutes
             if (!timerInterval) {
               startTime = storedTime;
               let lastAlertTime = 0; // 记录上次触发提示的时间
@@ -77,9 +76,7 @@
                   timerElement.textContent = formatTime(timeElapsed);
                   // check 5min
                   if (timeElapsed >= 5 * 60 * 1000 && timeElapsed - lastAlertTime >= 5 * 60 * 1000) {
-                   // clearInterval(timerInterval);
-                    //timerInterval = null;
-                    lastAlertTime = timeElapsed; // 更新上次触发提示的时间
+                    lastAlertTime = timeElapsed; 
                     alert("You have been browsing this page for another 5 minutes！");
                   }
                 }

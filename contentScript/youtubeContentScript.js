@@ -1,10 +1,11 @@
-
-
+// Code adapted from husainunwalla's Final-Submission/helloworld.js
+// Source: https://github.com/husainunwalla/chrome-extension/blob/Final-Submission/helloworld.js
+// This part of my extension is different than existing extension codebase because:
+// I've added more filtering options, not only filtering the feeds, but also filtered the left elements.
 function checkPage() {
     var url = new URL(window.location.href);
 
     if (url.hostname === 'www.youtube.com' && url.pathname == "/") {
-        // the following code for blocking youtube elements are reused & modified from helloworld.js of the default template
         document.querySelector('ytd-browse[role="main"][page-subtype="home"] #contents').remove(); 
         document.querySelector('#guide-wrapper').remove();
         

@@ -1,3 +1,11 @@
+// Code Adapted from Yet-Another-Leetcode-Timer
+// Source 1: https://github.com/djtran/Yet-Another-LeetCode-Timer/blob/master/src/leetcode/timer.js
+// Source 2: https://github.com/djtran/Yet-Another-LeetCode-Timer/blob/master/src/leetcode/main.js
+// This part of my extension is different than existing extension codebase in 3 aspects:
+// 1) I've updated to Leetcode's latest UI, where a lot of web element's class names are changed.
+// 2) I also changed the place of timer into the top of the Leetcode's UI making it more obvious.
+// 3) I added the positive encouragement notification function so that when people finished tasks they can receive the notice.
+
 (function() {
     let timerDisplay;
     let startTimerButton;
