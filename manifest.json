@@ -6,7 +6,7 @@
   "version": "2.6",
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "WechatIMG691.png"
+    "default_icon": "images/WechatIMG691.png"
   },
   "content_scripts": [
     {
@@ -31,7 +31,7 @@
 
   "web_accessible_resources": [
     {
-      "resources": ["images/*.jpeg"],
+      "resources": ["images/*.jpeg","nunito-v25-latin-regular.woff2", "PressStart2P-Regular.ttf"],
       "matches": ["<all_urls>"]    }
   ]
 }

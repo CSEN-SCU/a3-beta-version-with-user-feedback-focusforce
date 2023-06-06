@@ -10,8 +10,13 @@ function blockSite() {
     document.body.style.alignItems = 'center';
     document.body.style.height = '100vh';  // Full viewport height
     let blockMessage = document.createElement('h1');
-    blockMessage.style.color = 'white';  // Change text color to white
+    blockMessage.style.color = 'black';  // Change text color to white
+    blockMessage.style.fontSize = '2.9em';  // Increase text size
     blockMessage.textContent = 'No way! You cannot access this site.';
+    // Create a semi-transparent white frame around the text
+    blockMessage.style.padding = '20px';
+    blockMessage.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+    blockMessage.style.borderRadius = '15px'; // rounded corners
     document.body.appendChild(blockMessage);
 }
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {

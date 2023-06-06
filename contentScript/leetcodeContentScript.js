@@ -127,7 +127,7 @@
                 container.appendChild(finishTimerButton);
 
                 // Find the reference node based on the XPath
-                let referenceNode = document.evaluate("//*[@id='__next']/div/div/div/nav/div/div/div[2]/a[3]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+                let referenceNode = document.evaluate("//*[@id='__next']/div/div/div/nav/div/div/div[1]/div", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
                 if (referenceNode) {
                     // Insert the container before the reference node
                     referenceNode.parentNode.insertBefore(container, referenceNode.nextSibling);

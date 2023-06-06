@@ -56,14 +56,8 @@
               timerElement.id = "timerElement";
               parentElement.appendChild(timerElement);
 
-              // Create the buttonElement
-             /* let buttonElement = document.createElement("button");
-              buttonElement.id = "buttonElement";
-              buttonElement.textContent = "switch";
-              parentElement.appendChild(buttonElement);*/
-
               // 添加鼠标悬停和移出事件监听器
-              parentElement.addEventListener("mouseenter", function() {
+              parentElement.addEventListener("mouseover", function() {
                 parentElement.style.display = "none";
               });
 
@@ -86,7 +80,7 @@
                    // clearInterval(timerInterval);
                     //timerInterval = null;
                     lastAlertTime = timeElapsed; // 更新上次触发提示的时间
-                    alert("You have been browsing this page for 5 minutes！");
+                    alert("You have been browsing this page for another 5 minutes！");
                   }
                 }
               }, 1000);
