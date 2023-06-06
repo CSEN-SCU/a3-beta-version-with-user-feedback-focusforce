@@ -1,8 +1,6 @@
 console.log("tab.js script loaded");
 
-// Rest of your code
-
-// tab.js
+// tab.js is for opening all the designated tabs once "Start Flowing" is Clicked.
 
 // Function to open a tab
 function openTab(evt, tabName) {
@@ -39,5 +37,4 @@ for (let i = 0; i < tablinks.length; i++) {
 // Set the default tab to open
 document.getElementById('defaultOpen').click();
 
-  
 console.log("Finished openTab function");

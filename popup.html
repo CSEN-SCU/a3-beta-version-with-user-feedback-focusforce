@@ -14,34 +14,57 @@
             </nav>
             <div class="content">
                 <div class="item item1" id="Start">
+                    <img src = 'images/WechatIMG432.jpeg' style="width:200px; height:auto; margin-top: -30px;" >
+                    <p class="intro-text">By clicking, all your current tabs will be closed and the whitelisted websites will be opened. This way we make starting tasks easier :)</p>
                     <button id="cleanButton">Start Flowing !</button>
                 </div>
                 <div class="item item2" id="Whitelist">
-                    <p>The white list is unmodifiable. Please focus on the following flow: 1) Leetcode.com for daily practice; 2) Youtube for searching solving methods; 3) ChatGPT for small issues that cannot find answer elsewhere.</p>
+                    <img src = 'images/whitelist.png' style="width:200px; height:auto; margin-top: -30px;" >
+                    <p>The white list is unmodifiable and only has 4 websites.</p>
+                    <div class="website">Tense Max Leetcode </div>
+                    <p>     (with inbuilt timer)</p>
+                    <div class="website">Sober Youtube </div>
+                       <p> (filters only leetcode ans videos)</p>
+                    <p>And.. our good-o-friend:</p>
+                    <div class="subWebsite">ChatGPT & Neetcode.io </div>
+                    
                 </div>
                 <div class="item item3" id="Greylist">
-                    <p>If you click on non-blocked and non-whitelisted websites, the reminder will tell you how much time you've used in these websites. Please use it for random and small tasks that need to be solved immediately.</p>
+                    <img src = 'images/greylist.png' style="width:200px; height:auto; margin-top: -30px;" >
+                    <p>We all know things could happen: </p>
+                    <p>It is HARD to make a clear line between whitelists and blocked lists.</p>
+                    <p> Random things popping up that needs us to handle immediately. </p>
+                    <p>The timer for greylist websites will tell you how much time you spent and will remind you every 5 minutes. </p>
                 </div>
                 <div class="item item4" id="Blocklist">
                     <form id="blockForm">
-                        <label for="blockInput">Add a website to the block list:</label><br>
+                        <h4>Add a website to the block list:</h4>
                         <input type="text" id="blockInput" name="blockInput"><br>
                         <input value="Block" id="blockButton" type="submit">
                     </form>
-                    <h2>Blocked List:</h2>
+
+
+                    <div class="editBlockList">
+                    <label id="blockedLabel">Blocked List:</label>
+                    <div id="blockListFrame">
                     <div id="blockListContainer"></div>
                     <!-- Section for modifying blocked lists -->
-                    <h2>Modify Blocked List</h2>
-                    <button id="modifyButton">Modify</button>
+                    </div>
+
+
+                    <label id="modifyLabel"> </label>
+                    <div id="modifyFrame">
+                    <button id="modifyButton">Click me to modify blocklist!</button>
                     <!-- Hidden section for verification and modification -->
                     <div id="modifySection" style="display: none;">
                         <h3>Verification Required</h3>
-                        <p>Answer the following question to proceed:</p>
                         <p>Please type the string in reverse order:</p>
                         <p>dsfg!jhit*jew9ri7opt#i</p>
                         <input type="text" id="answerInput" name="answerInput">
                         <button id="submitAnswerButton">Submit Answer</button>
                     </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>

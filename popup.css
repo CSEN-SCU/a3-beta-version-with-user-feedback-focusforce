@@ -1,9 +1,29 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url('nunito-v25-latin-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Press-Start-2P';
+  src: url('PressStart2P-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-scroll-behavior:smooth;
-    scroll-behavior: smooth;
+    -webkit-scroll-behavior:auto;
+    scroll-behavior: auto;
+    font-family: 'Nunito', sans-serif;
+    
   }
   body {
     background: #F8BC9A;
@@ -12,24 +32,32 @@
     align-items: center;
     justify-content: center;
     transition: all 1s;
-    width: 280px; /* Or whatever width you want */
-    height: 400px; /* Or whatever height you want */
-
-  }
-  h1 {
-    margin-bottom: 20px;
-  }
-  .container {
     width: 250px;
-    height: 350px;
-    background: white;
-    overflow: hidden;
-    z-index: 3;
-  }
+    height: 400px;
+    border:2px solid #d53c3c;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Add some shadow to create a 3D effect */
+}
+
+h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-family: 'Press-Start-2P';
+    color: #844E45; /* Add color to the title, use Morandi orange */
+}
+
+.container {
+  width: 248px;
+  height: 350px;
+  background: white;
+  overflow: hidden;
+  z-index: 3;
+}
+
   .wrapper {
     position: relative;
-    width: 250px;
-    height: 350px;
+    width: 246px;
+    height: 400px;
     overflow: hidden;
     color: rgb(160, 236, 241);
   }
@@ -63,29 +91,63 @@
     background: rgba(231, 228, 228, 0.801);
     border-radius: 5px;
   }
-  .content {
-    display: flex;
-    width: 1000px;
-    height: 100%;
-  }
-  .item {
-    width: 250px;
-    color: black;
-    background: white;
-    display: flex;
-    row-gap: 25px;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
+  .intro-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.content {
+  display: flex;
+  width: 1000px;
+  height: 100%;
+}
+.item {
+  width: 250px;
+  height: 350px;
+  color: black;
+  background: white;
+  display: flex;
+  row-gap: 5px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow: auto;
+
+}
+
+
+.whitelist p {
+  text-align: left;
+}
+
+.website {
+  color:#a80202;
+  font-size: larger;
+}
+
+.subWebsite {
+  color:#0b4079;
+  font-size:small;
+}
+
   .link {
     transition: all 0.3s;
     font-weight: bold;
-  }
-  .link:hover {
-    color: #3474b9;
-  }
+    color: #6E4A48; /* Use Morandi orange */
+}
+
+.link:hover {
+    color: #D47C6B; /* Use a lighter Morandi orange for hover effect */
+}
+
+.editBlockList {
+  height:185px;
+  width:220px;
+  margin-bottom: -40px;
+}
+
   .link1, .link2, .link3, .link4 {
     color: rgb(22, 22, 22);
     transform: scale(1.1);
@@ -93,7 +155,7 @@
   }
   #cleanButton {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
@@ -101,116 +163,135 @@
     border-radius: 4px;
     border: none;
     color: #fff;
-    background-color: #5f9fe3; /* 将颜色代码更改为所需的蓝色 */
+    background-color: #6E4A48; /* Use Morandi orange for button */
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
   }
   
- #cleanButton:hover {
-    background-color: #145fb0; /* 悬停时的颜色 */
-  }
+    
+#cleanButton:hover {
+  background-color: #D47C6B; /* Use a lighter Morandi orange for hover effect */
+}
   
   #cleanButton:active {
     background-color: #0b4079; /* 点击时的颜色 */
   }
 
-  #Blocklist {
-    height: 300px; /* 设置元素的高度，可以根据需要进行调整 */
-    overflow-y: scroll; /* 设置垂直滚动 */
-  }
 
-  #blockForm {
-    display: flex;
+ #blockForm {
     flex-direction: column;
-    align-items: center;
-  }
-  
-  #blockForm label {
-    margin-bottom: 5px;
-  }
-  
-  #blockInput {
+    align-items: flex-start;
+    border-radius: 8px;
     padding: 5px;
+    max-width: 100%;
+    max-height:100%;
+    margin-top:-50px;
+    margin-bottom: 10px;
+
+} 
+
+
+#blockListContainer {
+  width: 100%;
+  height: 50px;  /* adjust the height as needed */
+  overflow: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 2px solid black;
+}
+
+
+
+#modifyFrame {
+  width: 100%;
+  height: 90px;  /* adjust the height as needed */
+  margin-top: 0;
+  overflow: auto;
+}
+
+
+
+#blockInput {
+    font-size: 0.8rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-bottom: 4px;
-  }
-  
-  #blockButton {
-    padding: 5px 5px;
-    background-color: #d53c3c;
-    border: none;
+    margin-bottom: 5px;
+    width: 80%;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#blockButton {
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    text-align: center;
+    text-decoration: none;
     border-radius: 4px;
+    border: none;
     color: #fff;
+    background-color: #6E4A48; 
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  #blockButton:hover {
-    background-color: #a80202;
-  }
-  
-  #blockButton:active {
-    background-color: #420101;
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 10px
+}
+
+#blockButton:hover {
+  background-color: #D47C6B; 
+}
+
+
+/* left-align block list titles */
+ #blockedLabel {
+  padding-left: -15px;
+}
+
+#modifyLabel {
+  padding-left: -15px;
+
+}
+#modifyButton {
+  padding: 4px 15px;
+  font-size: 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  background-color: #ce8b8b;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+#modifySection {
+    border: 3px solid #5f9fe3;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: left;
+    align-items: flex-start;
+}
+
+#submitAnswerButton {
+    font-size: 0.8rem;
+    border: 3px solid #5f9fe3;
+    background: none;
+    width: 80%;
+    padding: 5px 15px;
+    margin-top: 10px;
+}
+
+
+  #Blocklist {
+    overflow-y: scroll; /* 设置垂直滚动 */
+    height: auto;
   }
 
-  #modifyButton {
-    padding: 5px 5px;
-    background-color: #31a568;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #modifyButton:hover {
-    background-color: #1a773f;
-  }
-  
-  #modifyButton:active {
-    background-color: #055838;
-  }
-  
-  #modifySection {
-    display: none;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  #modifySection h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  #modifySection p {
-    margin-bottom: 5px;
-  }
-  
-  #modifySection input[type="text"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-  
-  #submitAnswerButton {
-    padding: 5px 5px;
-    background-color: #5f9fe3;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #submitAnswerButton:hover {
-    background-color: #145fb0;
-  }
-  
-  #submitAnswerButton:active {
-    background-color: #0b4079;
-  }
 
   button.deleteButton {
     padding: 2px 2px;
