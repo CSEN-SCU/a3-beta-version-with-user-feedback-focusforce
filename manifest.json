@@ -1,20 +1,37 @@
+
 {
   "manifest_version": 3,
-  "name": "Hello Extensions",
+  "name": "LeetFlow",
   "description": "COEN 296A A3",
-  "version": "1.0",
+  "version": "2.6",
   "action": {
-    "default_popup": "helloworld.html",
-    "default_icon": "helloworld.png"
+    "default_popup": "popup.html",
+    "default_icon": "WechatIMG691.png"
   },
   "content_scripts": [
     {
-      "js": ["helloworld.js"],
-      "matches": ["https://www.youtube.com/*"]
+      "matches": ["<all_urls>"],
+      "js": ["contentScript/timerContentScript.js","contentScript/blocklistContentScript.js"],
+      "css": ["timerStyles.css"]
+    },
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["contentScript/youtubeContentScript.js"]
+    },
+    {
+      "matches": ["https://leetcode.com/*"],
+      "js": ["contentScript/leetcodeContentScript.js", "contentScript/reviewReminderScript.js"]    
     }
   ],
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["storage", "activeTab", "scripting"]
+  "permissions": ["storage", "tabs", "activeTab", "scripting", "webNavigation", "storage", "windows", "notifications",
+  "webRequest"],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*.jpeg"],
+      "matches": ["<all_urls>"]    }
+  ]
 }

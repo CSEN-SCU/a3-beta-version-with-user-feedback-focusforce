@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-scroll-behavior:smooth;
+    scroll-behavior: smooth;
+  }
+  body {
+    background: #F8BC9A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+    width: 280px; /* Or whatever width you want */
+    height: 400px; /* Or whatever height you want */
+
+  }
+  h1 {
+    margin-bottom: 20px;
+  }
+  .container {
+    width: 250px;
+    height: 350px;
+    background: white;
+    overflow: hidden;
+    z-index: 3;
+  }
+  .wrapper {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    color: rgb(160, 236, 241);
+  }
+  nav {
+    position: absolute;
+    top: 87%;
+    left: 0;
+    width:100%;
+    height: 110px;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid gainsboro;
+    z-index: 8;
+    background-color: rgba(208, 203, 203, 0.801);
+  }
+  nav a {
+    padding: 8px;
+    text-decoration: none;
+    color: rgb(160, 154, 154);
+    font-size: 0.5rem;
+  }
+  nav::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 6px;
+    background: rgba(231, 228, 228, 0.801);
+    border-radius: 5px;
+  }
+  .content {
+    display: flex;
+    width: 1000px;
+    height: 100%;
+  }
+  .item {
+    width: 250px;
+    color: black;
+    background: white;
+    display: flex;
+    row-gap: 25px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .link {
+    transition: all 0.3s;
+    font-weight: bold;
+  }
+  .link:hover {
+    color: #3474b9;
+  }
+  .link1, .link2, .link3, .link4 {
+    color: rgb(22, 22, 22);
+    transform: scale(1.1);
+    border-bottom: 1px solid black;
+  }
+  #cleanButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    background-color: #5f9fe3; /* 将颜色代码更改为所需的蓝色 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+ #cleanButton:hover {
+    background-color: #145fb0; /* 悬停时的颜色 */
+  }
+  
+  #cleanButton:active {
+    background-color: #0b4079; /* 点击时的颜色 */
+  }
+
+  #Blocklist {
+    height: 300px; /* 设置元素的高度，可以根据需要进行调整 */
+    overflow-y: scroll; /* 设置垂直滚动 */
+  }
+
+  #blockForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #blockForm label {
+    margin-bottom: 5px;
+  }
+  
+  #blockInput {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 4px;
+  }
+  
+  #blockButton {
+    padding: 5px 5px;
+    background-color: #d53c3c;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #blockButton:hover {
+    background-color: #a80202;
+  }
+  
+  #blockButton:active {
+    background-color: #420101;
+  }
+
+  #modifyButton {
+    padding: 5px 5px;
+    background-color: #31a568;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #modifyButton:hover {
+    background-color: #1a773f;
+  }
+  
+  #modifyButton:active {
+    background-color: #055838;
+  }
+  
+  #modifySection {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #modifySection h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #modifySection p {
+    margin-bottom: 5px;
+  }
+  
+  #modifySection input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  #submitAnswerButton {
+    padding: 5px 5px;
+    background-color: #5f9fe3;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #submitAnswerButton:hover {
+    background-color: #145fb0;
+  }
+  
+  #submitAnswerButton:active {
+    background-color: #0b4079;
+  }
+
+  button.deleteButton {
+    padding: 2px 2px;
+    background-color: #d53c3c;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.deleteButton:hover {
+    background-color: #a80202;
+  }
+  
+  button.deleteButton:active {
+    background-color: #420101;
+  }
+  

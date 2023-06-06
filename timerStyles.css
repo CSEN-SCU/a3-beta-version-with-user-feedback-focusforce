@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Nunito";
+    src: url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap") format("woff2"),
+         url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap") format("woff");
+}
+
+#parentElement {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8D49A;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 165, 0, 0.7);
+}
+
+
+#textElement {
+    position: absolute;
+    font-family: 'Nunito', sans-serif;
+    font-size:small;
+    top: 0;
+    left: 5px;
+    margin-top: 5px; /* 增加间距 */
+    margin-bottom: 5px;
+}
+
+#timerElement {
+    padding: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-size: large;
+    z-index: 9999;
+    margin-top:5px;
+}
+
+
+  
+
+
+
